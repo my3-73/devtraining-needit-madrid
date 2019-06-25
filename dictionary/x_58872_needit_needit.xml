@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="additional comments" max_length="40" name="additionalcomments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="hr" label="req type" mandatory="true" max_length="40" name="reqtype" type="string">
+            <choice>
+                <element inactive_on_update="false" label="HR" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="your dept choice" sequence="3" value="your_choice"/>
+            </choice>
+        </element>
+        <element label="requested for" mandatory="true" max_length="32" name="requestedfor" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal1" label="what needed" mandatory="true" max_length="40" name="whatneeded" type="string">
+            <choice>
+                <element inactive_on_update="false" label="hr1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="hr2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="fac1" sequence="2" value="fac1"/>
+                <element inactive_on_update="false" label="fac2" sequence="3" value="fac2"/>
+                <element inactive_on_update="false" label="legal1" sequence="4" value="legal1"/>
+                <element inactive_on_update="false" label="legal2" sequence="5" value="legal2"/>
+                <element inactive_on_update="false" label="your dept choice1" sequence="6" value="your dept choice1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="when needed" mandatory="true" max_length="40" name="whenneeded" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="work notes" max_length="40" name="worknotes" type="string"/>
+    </element>
+</database>
